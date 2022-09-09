@@ -1,0 +1,257 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+$govuk-new-link-styles: true;
+
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: '/govuk/assets/';
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-header";
+@import "patterns/step-by-step-nav";
+@import "patterns/step-by-step-related";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+// Panel
+.govuk-panel.bad {
+    color: #b1b4b6;
+}
+
+.govuk-panel .govuk-panel__body {
+    font-size: 24px;
+    font-size: 1.5rem;
+}
+
+// Pagination
+
+.pagination {
+    padding-top: 1em; 
+}
+  
+.pagination.good a {
+    padding: .7em 1em;
+    border: 2px solid;
+    margin-right: .5em; 
+    font-size: 20px;
+    font-size: 1.2rem;
+}
+
+// Tables
+.fullscreen-scrollable-table {
+    overflow-x: auto; 
+}
+  
+.fullscreen-scrollable-table::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #ccc; 
+}
+  
+.fullscreen-scrollable-table::-webkit-scrollbar-thumb {
+    background: #666; 
+}
+  
+.register-data-table {
+    background-color: #f3f2f1;
+    table-layout: auto !important;
+    margin-bottom: 0 !important; 
+}
+
+.register-data-table th,
+.register-data-table td {
+    padding-left: .5em; 
+    border-bottom: 1px solid #b1b4b6;
+}
+
+.register-data-table.bad th, .register-data-table.bad td {
+    padding-right: 2em; 
+}
+
+.register-data-table th {
+    position: relative;
+    white-space: nowrap; 
+}
+  
+// tooltip (used in table)
+.tooltip-trigger {
+    color: #1d70b8;
+    text-decoration: underline;
+    padding: 0 .2em; 
+}
+
+.tooltip-trigger:hover {
+    color: #003078; 
+}
+
+.tooltip-trigger:active {
+    color: #0b0c0c; 
+}
+
+.tooltip-trigger:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #ffdd00;
+    box-shadow: 0 0 0 3px #ffdd00;
+    box-shadow: 0 10px 0 1px #ffdd00, 0 -1px 0 1px #ffdd00;
+    text-decoration: none; 
+}
+  
+.tooltip {
+    background-color: #ffffff;
+    border: 3px solid #0b0c0c;
+    width: 10em;
+    padding: .5em;
+    position: absolute;
+    top: calc(100% - 5px);
+    left: 0;
+    white-space: normal;
+    font-weight: normal;
+    display: none; 
+}
+  
+.tooltip-trigger.bad:hover + .tooltip {
+    display: block; 
+}
+  
+.tooltip-trigger.good:focus + .tooltip {
+    display: block;
+    box-shadow: 0 0 0 3px #ffdd00;
+    z-index: 1;
+}
+
+// refer_to_colour
+.govuk-button.red {
+    background-color: #d4351c;
+}
+  
+.govuk-button.blue {
+    background-color: #1d70b8;
+}
+
+
+// icon_font
+.social-media > span {
+    font-size: 200%; 
+}
+  
+.social-media {
+    display: inline-block;
+    text-decoration: none; 
+}
+
+.hmrc-eh-bold {
+    color: #1d70b8;
+    font-weight: bold;
+}
+
+.hmrc-eh-image {
+    max-width: 100%;
+}
+
+.hmrc-eh-quote {
+    position: relative; 
+    text-align: center;
+    padding: 1.5rem 1.8rem;
+    margin: 0 0 2rem;
+    border: 5px solid #0b0c0c;
+    border-radius: 10px;
+}
+
+@media (min-width: 40.0625em) {
+    .hmrc-eh-quote {
+        width: 60%;
+    }
+}
+
+.hmrc-eh-quote:before,
+.hmrc-eh-quote:after {
+    font-family: sans-serif;
+    position: absolute;
+    font-size: 92px;
+    background: #fff;
+    height: 60px;
+    width: 50px;
+}
+
+.hmrc-eh-quote:before {
+    content: open-quote;
+    top: -30px;
+    margin-right: -32px;
+    right: 100%;
+    padding-bottom: 12px;
+}
+.hmrc-eh-quote:after {
+    content: close-quote;
+    margin-left: -32px;
+    left: 100%;  
+    top: auto;
+    bottom: -16px;
+}
+
+.hmrc-eh-quote--ashleigh {
+    border-color: #292f53;
+
+    &:before,
+    &:after {
+        color: #292f53;
+    }
+}
+
+.hmrc-eh-quote--claudia {
+    border-color: #5584c1;
+
+    &:before,
+    &:after {
+        color: #5584c1;
+    }
+}
+
+.hmrc-eh-quote--ron {
+    border-color: #4f98b2;
+
+    &:before,
+    &:after {
+        color: #4f98b2;
+    }
+}
+
+.hmrc-eh-quote--chris {
+    border-color: #4a4849;
+
+    &:before,
+    &:after {
+        color: #4a4849;
+    }
+}
+
+.hmrc-eh-quote--pawel {
+    border-color: #b8453f;
+
+    &:before,
+    &:after {
+        color: #b8453f;
+    }
+}
+
+.hmrc-eh-quote--simone {
+    border-color: #c62c7c;
+
+    &:before,
+    &:after {
+        color: #c62c7c;
+    }
+}
+
+.hmrc-eh-quote--saleem {
+    border-color: #445563;
+
+    &:before,
+    &:after {
+        color: #445563;
+    }
+}

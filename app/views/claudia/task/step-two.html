@@ -1,0 +1,69 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Step 2 - Claudia - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Task complete</h1>
+      <p>You have completed the first task for Claudia.</p>
+
+      <h2 class="govuk-heading-l">Your answers</h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total number of ministers
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['total'] %}{{data['total']}}{% else %}No answer{% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="step-one">
+              Change<span class="govuk-visually-hidden"> total</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Are you confident with your answer?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['confident'] %}{{data['confident']}}{% else %}Not selected{% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="step-one">
+              Change<span class="govuk-visually-hidden"> confidence</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-l">Thoughts</h2>
+
+      <p>How did you find task?</p>
+
+      <p>Did you have any difficulties in completing it?</p>
+      
+      <p>Did you answer both questions?</p>
+
+      <p>How could the task be improved for accessibility?</p>
+
+      <h2 class="govuk-heading-l">Improvements</h2>
+
+      <p>Making small changes can have a big impact for some users.</p>
+      <p>We've made a number of changes to the previous task to make it more accessible.</p>
+      
+      <p>Now try out the improved version of the task.</p>
+
+      <p><a href="step-three" class="govuk-button" data-module="govuk-button">Start improved task</a></p>
+      <p><a href="../" class="govuk-link" >Return to start page</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

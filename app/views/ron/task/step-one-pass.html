@@ -1,0 +1,32 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Step 1 Passed - Ron - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "step-one.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Pass</h1>
+
+      <p>Yay, that worked.</p>
+
+      <form action="step-two.html" method="get">
+
+        <button class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">Continue</button>
+
+     </form>
+
+    </div>
+  </div>
+
+{% endblock %}

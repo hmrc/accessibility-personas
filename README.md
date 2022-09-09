@@ -1,8 +1,30 @@
 
-# accessibility-personas
+# DIAS Accessibility personas
 
-This is a placeholder README.md for a new repository
+## Developing this project
 
-### License
+1. Open a terminal in your development folder and checkout the project
 
-This code is open source software licensed under the [Apache 2.0 License]("http://www.apache.org/licenses/LICENSE-2.0.html").
+```
+git clone git@github.com:hmrc/accessibility-personas.git
+```
+
+2. Install dependancies
+
+```
+cd accessibility-personas
+
+npm install
+```
+
+3. Start the project running locally
+
+```
+npm start
+```
+
+4. Open the site in the browser
+
+```
+http://localhost:3000
+```

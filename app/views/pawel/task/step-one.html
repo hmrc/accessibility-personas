@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Step 1 - Pawel - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<link href="/public/css/distractions.user.css" rel="stylesheet" media="all">
+<link href="/public/css/dark-mode.user.css" rel="stylesheet" media="all">
+<script src="/public/javascripts/distractions.user.js" type="text/javascript" async=""></script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Flu Medication</h1>
+
+      <script>
+
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+        
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+        
+                display.textContent = minutes + ":" + seconds;
+        
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+        
+        window.onload = function () {
+            var duration = 60 * 2,
+                display = document.querySelector('#time');
+            startTimer(duration, display);
+        };
+        
+      </script>
+        
+      <p>You have to finish this task in <strong id="time">02:00</strong> minutes!</p>
+      
+      <p>A specific vaccine for humans that is effective in preventing avian influenza is not yet readily available. Based upon limited data, the CDC has suggested that the anti-viral medication Oseltamivir (brand name-Tamiflu) may be effective in treating avian influenza. Using this input, the Department of State has decided to pre-position the drug Tamiflu at its Embassies and Consulates worldwide, for eligible U.S. Government employees and their families serving abroad who become ill with avian influenza. We emphasize that this medication cannot be made available to private U.S. citizens abroad. Because of this, and because Tamiflu may not be readily available overseas, the State Department encourages American citizens traveling or living abroad to consult with their private physician about whether to obtain Tamiflu prior to travel, for use in the event treatment becomes necessary, or whether Tamiflu is readily available in the country where they reside. Americans should also be aware of the potential health risk posed by counterfeit drugs, including those represented as Tamiflu, by internet scam artists or in countries with lax regulations governing the production and distribution of pharmaceuticals. In addition, the Department of State has asked its embassies and consulates to consider preparedness measures that take into consideration the fact that travel into or out of a country may not be possible, safe or medically advisable. Guidance on how private citizens can prepare for a “stay in place” response, including stockpiling food, water, and medical supplies, is available on the CDC and pandemicflu.gov websites.</p>
+      <h2 class="govuk-heading-m">Questions</h2>
+
+      <form action="step-two.html" method="get">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="tamiflu">Where you can get Tamiflu if you are a U.S. Government employee abroad?</label>
+          <input class="govuk-input govuk-!-width-one-half" id="tamiflu" name="tamiflu" type="text" autocomplete="off">
+        </div>
+      
+        <h3 class="govuk-heading-m">Click the blue button</h3>
+
+        <button name="button-colour" value="Green" class="govuk-button" data-module="govuk-button">Save</button>
+        <button name="button-colour" value="Blue"  class="govuk-button blue" data-module="govuk-button">Send</button>
+        <button name="button-colour" value="Red"  class="govuk-button red" data-module="govuk-button">Submit</button>
+
+     </form>
+
+    </div>
+  </div>
+
+{% endblock %}

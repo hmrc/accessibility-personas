@@ -1,0 +1,60 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Claudia - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "/"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Claudia</h1>
+      
+      <img class="govuk-body govuk-!-margin-bottom-6" src="/public/images/claudia.png" alt="claudia's profile picture" style="max-width: 150px;" />
+
+      <blockquote class="govuk-body hmrc-eh-quote hmrc-eh-quote--claudia">
+        My screen magnifier has made it possible for me to use the web again. I just wish more companies kept their websites simple.
+       </blockquote>
+
+      <h2 class="govuk-heading-m">About Claudia</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p>54 year old social worker</p></li>
+        <li><p>Sight impaired (partially sighted)</p></li>
+        <li><p>Uses a screen magnifier and changes colours to increase contrast</p></li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Frustrations</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p>Tends to forget to scroll horizontally when the screen is magnified.</p></li>
+        <li><p>Sometimes misses fields or help text when filling in forms that are next to each other.</p></li>
+        <li><p>Hates it when the screen is magnified and a pop-up box appears off screen.</p></li>
+        <li><p>Get’s confused if the layout of a form isn’t consistent.</p></li>
+      </ul>
+      
+      <h2 class="govuk-heading-m">Required assistive technology</h2>
+
+      <p>None, complete the task as presented in the browser.</p>
+
+      <h2 class="govuk-heading-m">Task</h2>
+
+      <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-6">
+        <li>Read the text on the following page.</li>
+        <li>Find out the total number of ministers.</li>
+        <li>Fill in the form on the same page and submit your answer.</li>
+      </ol>
+
+      <p><a class="govuk-button" data-module="govuk-button" href="task/step-one.html">Start task</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+:root { 
+    background-color: #fefefe;
+    filter: invert(100%);
+ }
+ 
+ * { 
+    background-color: inherit;
+    filter: contrast(1.5);
+ }
+ 
+ img:not([src*=".svg"]), video, .wds-img-element {  
+    filter: invert(100%);
+ }

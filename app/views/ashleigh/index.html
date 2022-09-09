@@ -1,0 +1,61 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Ashleigh - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "/"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <style>
+    
+  </style>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Ashleigh</h1>
+      <img class="govuk-body govuk-!-margin-bottom-6" src="/public/images/ashleigh.png" alt="ashleigh's profile picture" style="max-width: 150px;" />
+
+      <blockquote class="govuk-body hmrc-eh-quote hmrc-eh-quote--ashleigh">
+        I couldn’t buy my sister the present she really wanted for her birthday because none of the fields were labelled on the website.
+       </blockquote>
+
+      <h2 class="govuk-heading-m">About Ashleigh</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p>24 year old arts graduate and administrative assistant</p></li>
+        <li><p>Severely sight impaired (blind)</p></li>
+        <li><p>Uses a screen reader</p></li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Frustrations</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p>Annoyed when she has to look for a phone number or ask for help when a website doesn’t work with her screen reader.</p></li>
+        <li><p>Sometimes guesses what she needs to fill in because a screen reader can’t read forms if they aren’t labelled properly. </p></li>
+        <li><p>Can’t visualise the item she’s looking at when shopping online because there’s no description that her screen reader can understand.</p></li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Required assistive technology</h2>
+
+      <p>Use your computer's built-in Screen reader.</p>
+
+      <h2 class="govuk-heading-m">Task</h2>
+
+      <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-6">
+        <li>Read the text on the following page.</li>
+        <li>Fill in the form on the same page and submit your answer.</li>
+      </ol>
+
+      <p><a class="govuk-button" data-module="govuk-button" href="task/step-one.html">Start task</a></p>
+    </div>
+  </div>
+
+{% endblock %}

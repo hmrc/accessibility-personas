@@ -1,0 +1,60 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Step 2 - Chris - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Task complete</h1>
+      <p>You have completed the first task for Chris.</p>
+
+      <h2 class="govuk-heading-l">Your answers</h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is Algeria's ISO 3166-2 alpha2 code?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['alpha2-code'] %}{{data['alpha2-code']}}{% else %}No answer{% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="step-one">
+              Change<span class="govuk-visually-hidden"> code</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is the citizen name for Afghanistan?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['citizen-name'] %}{{data['citizen-name']}}{% else %}No answer{% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="step-one">
+              Change<span class="govuk-visually-hidden"> citizen name</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Thoughts</h2>
+
+      <p>How did you find this task?</p>
+
+      <p>Did you have any difficulties in completing it?</p>
+      
+      <p>How could the service be improved for Chris?</p>
+
+      <p><a href="step-three" class="govuk-button" data-module="govuk-button">Start improved task</a></p>
+      <p><a href="../" class="govuk-link" >Return to start page</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
