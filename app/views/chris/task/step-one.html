@@ -1,0 +1,95 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Step 1 - Chris - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<link href="/public/css/remove-cursor.user.css" rel="stylesheet" media="all">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Country register</h1>
+      
+      <div class="fullscreen-scrollable-table govuk-body technical-documentation">
+        <table class="register-data-table bad">
+        <thead>
+          <tr>
+            <th class="country">
+              Country
+                <span class="tooltip-trigger bad"><span class="govuk-visually-hidden">What does country mean</span>?</span>
+      <span class="tooltip">The country’s 2-letter ISO 3166-2 alpha2 code.</span>
+      
+            </th>
+            <th class="name">
+              Name
+            </th>
+            <th class="official-name">
+              Official name
+            </th>
+            <th class="citizen-names">
+              Citizen names
+            </th>
+            <th class="start-date">
+              Start date
+            </th>
+            <th class="end-date">
+              End date
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AF</td>
+            <td>Afghanistan</td>
+            <td>The Islamic Republic of Afghanistan</td>
+            <td>Afghan</td>
+            <td>No data</td>
+            <td>No data</td>
+          </tr>
+          <tr>
+            <td>AL</td>
+            <td>Albania</td>
+            <td>The Republic of Albania</td>
+            <td>Albanian</td>
+            <td>No data</td>
+            <td>No data</td>
+          </tr>
+          <tr>
+            <td>DZ</td>
+            <td>Algeria</td>
+            <td>The People’s Democratic Republic of Algeria</td>
+            <td>Algerian</td>
+            <td>No data</td>
+            <td>No data</td>
+          </tr>
+      
+        </tbody>
+      </table>
+      
+      </div>
+
+      <h2 class="govuk-heading-m">Question</h2>
+
+      <form action="step-two.html" method="get">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="alpha2-code">What is Algeria's ISO 3166-2 alpha2 code?</label>
+          <input class="govuk-input govuk-!-width-one-quarter" id="alpha2-code" name="alpha2-code" type="text" autocomplete="off" value="{{ data['alpha2-code'] }}">
+        </div>
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="citizen-name">What is the end date of the Algeria entry?</label>
+          <input class="govuk-input govuk-!-width-one-quarter" id="citizen-name" name="citizen-name" type="text" autocomplete="off" value="{{ data['citizen-name'] }}">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Submit</button>
+
+     </form>
+
+    </div>
+  </div>
+
+{% endblock %}

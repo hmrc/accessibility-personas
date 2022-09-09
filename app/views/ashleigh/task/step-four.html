@@ -1,0 +1,38 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Tasks complete - Ashleigh -  Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Task complete</h1>
+      <p>You have completed the second task for Ashleigh.</p>
+
+      <h2 class="govuk-heading-l">Changes</h2>
+
+      <p>The following changes were made to improve the task</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the image alt text contained the same information that was shown visually</li>
+        <li>the fieldset legend was associated correctly with the control</li>
+        <li>all headings were marked up correctly using heading tags</li>
+      </ul>
+
+      <h2 class="govuk-heading-l">Thoughts</h2>
+
+      <p>Did you find the information easier to find?</p>
+
+      <p>Did you have any other difficulties in completing the task?</p>
+      
+      <p class="govuk-!-margin-bottom-9">How could the service be further improved for accessibility?</p>
+
+      <p><a href="/" class="govuk-button" data-module="govuk-button">Return to personas page</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

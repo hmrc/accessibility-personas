@@ -1,0 +1,26 @@
+/* ==UserStyle==
+@name         Open dyslexic
+@namespace    https://github.com/alphagov/accessibility-personas
+@version      1.0.1
+@license      MIT
+@author       Crown Copyright (Government Digital Service)
+@description  Apply the opendyslexic-bold-webfont.woff to all page content
+@homepageURL  https://alphagov.github.io/accessibility-personas/
+==/UserStyle== */
+
+@font-face {
+    font-family: "Open dyslexic";
+    font-style: normal;
+    font-weight: normal;
+    src: url(/public/fonts/opendyslexic-bold-webfont.woff) format("woff");
+    font-display: fallback
+}
+
+body {
+    background-color: snow !important;
+}
+
+body * {
+    font-family: "Open dyslexic" !important;
+}
+  

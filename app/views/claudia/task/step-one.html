@@ -1,0 +1,64 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Step 1 - Claudia - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<link href="/public/css/zoom.user.css" rel="stylesheet" media="all">
+<link href="/public/css/high-contrast.user.css" rel="stylesheet" media="all">
+<script src="/public/javascripts/scroll-at-edge.js" type="text/javascript" async=""></script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Claudia's task</h1>
+      <h2 class="govuk-heading-l">Who runs the government</h1>
+      <p>
+        The Prime Minister is head of the UK government. They are ultimately responsible for all policy and decisions. They oversee the operation of the Civil Service and government agencies, appoint members of the government and are the principal government figure in the House of Commons.
+      </p>
+
+      <p>
+        The Cabinet is made up of the senior members of government. Every week during Parliament, members of the Cabinet (Secretaries of State from all departments and some other ministers) meet to discuss the most important issues for the government.
+      </p>
+
+      <p>1 Prime Minister + 20 Cabinet ministers + 97 Other ministers = 118 Total ministers. Ministers are chosen by the Prime Minister from the members of the House of Commons and House of Lords. They are responsible for the actions, successes and failures of their departments.</p>
+
+    </div>
+
+     
+    <div class="govuk-grid-column-full govuk-!-margin-top-6">
+      <h2 class="govuk-heading-l">Questions</h2>
+
+      <form action="step-two.html" method="get">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="year">Total number of ministers</label>
+          <input class="govuk-input govuk-!-width-one-quarter" id="total" name="total" type="text" autocomplete="off" value="{{ data['total'] }}">
+        </div>
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-fieldset__legend" style="float: left;">Are you confident with your answer?</div>
+            <div class="govuk-radios govuk-radios--inline" style="float: right;padding-top:4px">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="confident-yes" name="confident" type="radio" value="yes" {{ checked("confident", "yes") }}>
+                <label class="govuk-label govuk-radios__label" for="confident-yes">Yes</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="confident-no" name="confident" type="radio" value="no" {{ checked("confident", "no") }}>
+                <label class="govuk-label govuk-radios__label" for="confident-no">No</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      
+        <button class="govuk-button" data-module="govuk-button">Submit</button>
+
+     </form>
+
+    </div>
+  </div>
+
+{% endblock %}

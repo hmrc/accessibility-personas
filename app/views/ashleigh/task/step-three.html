@@ -1,0 +1,54 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Step 3 - Ashleigh - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<link href="/public/css/heavy-blur.user.css" rel="stylesheet" media="all">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Ashleigh's task</h1>
+      <h2 class="govuk-heading-l">Types of assistive technology</h1>
+      <p>
+        Types of assistive technology used to access GOV.UK
+      </p>
+
+      <img class="govuk-body govuk-!-margin-bottom-6" src="/public/images/accessibility-survey.png" alt="Screen magnifier: 30%; screen reader: 29%; speech recognition: 18%; readability: 15%; other: 8%" style="max-width: 100%" />
+
+      <h2 class="govuk-heading-l">Questions</h2>
+
+      <form action="step-four.html" method="get">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="percentage">Enter the percentage of screen reader users</label>
+          <input class="govuk-input govuk-!-width-one-quarter" id="percentage" name="percentage" type="text" autocomplete="off">
+        </div>
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend">Were you suprised by this figure?</legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="suprised-yes" name="suprised" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="suprised-yes">Yes</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="suprised-no" name="suprised" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="suprised-no">No</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      
+        <button class="govuk-button" data-module="govuk-button">Submit</button>
+
+     </form>
+
+    </div>
+  </div>
+
+{% endblock %}

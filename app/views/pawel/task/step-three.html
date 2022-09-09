@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Step 3 - Pawel - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<link href="/public/css/distractions.user.css" rel="stylesheet" media="all">
+<link href="/public/css/dark-mode.user.css" rel="stylesheet" media="all">
+<script src="/public/javascripts/distractions.user.js" type="text/javascript" async=""></script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">How Bird Flu is treated in the US</h1>
+
+      <script>
+
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+        
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+        
+                display.textContent = minutes + ":" + seconds;
+        
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+        
+        window.onload = function () {
+            var duration = 60 * 2,
+                display = document.querySelector('#time');
+            startTimer(duration, display);
+        };
+        
+      </script>
+        
+      <p>You have to finish this task in <strong id="time">02:00</strong> minutes!</p>
+      
+      <p>The U.S. Government does not have a vaccine that can prevent humans getting avian influenza (Bird flu). However, the Centers for Disease Control and Prevention (CDC) has research that suggests the antiviral medication Oseltamivir (brand name-Tamiflu) may be effective in treating Bird Flu.</p>
+          
+      <h2 class="govuk-heading-m">Prepare for a Bird Flu outbreak in the U.S.</h2>
+      <p>You can find guidance how to prepare for a Bird Flu outbreak, including stockpiling food, water, and medical supplies on the CDC and pandemicflu.gov websites.</p>
+
+      <h2 class="govuk-heading-m">What to do if you’re a U.S. Government employee</h2>
+      <p>The Department of State is offering Tamiflu at its Embassies and Consulates worldwide, for eligible U.S. Government employees and their families serving abroad who become ill with Bird Flu. Contact your embassy for more information.</p>
+
+      <h2 class="govuk-heading-m">Bird Flu treatment for U.S. private citizens abroad</h2>
+      <p>The U.S. Government cannot make Tamiflu available to private U.S. citizens abroad. The State Department encourages American citizens traveling or living abroad to consult with their doctor about whether to buy Tamiflu before travelling or whether Tamiflu will be available in their destination.</p>
+
+      <h2 class="govuk-heading-m">Be aware of counterfeit drugs</h2>
+      <p>American citizens should also be aware of the potential health risk posed by counterfeit drugs in foreign countries. Internet scam artists and countries with poor pharmaceuticals regulations may provide counterfeit tablets. Contact your local embassy or doctor if you are unsure about any treatment.</p>
+
+
+      <h2 class="govuk-heading-m">Questions</h2>
+
+      <form action="step-four.html" method="get">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="tamiflu">Where you can get Tamiflu if you are a U.S. Government employee abroad?</label>
+          <input class="govuk-input govuk-!-width-one-half" id="tamiflu" name="tamiflu" type="text" autocomplete="off">
+        </div>
+      
+        <h3 class="govuk-heading-m">Click the Submit button</h3>
+
+        <button name="button-colour" value="Green" class="govuk-button" data-module="govuk-button">Save</button>
+        <button name="button-colour" value="Blue"  class="govuk-button blue" data-module="govuk-button">Submit</button>
+        <button name="button-colour" value="Red"  class="govuk-button red" data-module="govuk-button">Send</button>
+
+     </form>
+
+    </div>
+  </div>
+
+{% endblock %}

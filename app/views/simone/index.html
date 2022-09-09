@@ -1,0 +1,58 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Simone - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "/"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Simone</h1>
+      <img class="govuk-body govuk-!-margin-bottom-6" src="/public/images/simone.png" alt="simone's profile picture" style="max-width: 150px;" />
+
+      <blockquote class="govuk-body hmrc-eh-quote hmrc-eh-quote--simone">
+        My spelling’s bad and forms take me ages to fill in, but I have to get things right in my job and the software I use helps me a lot.
+       </blockquote>
+
+      <h2 class="govuk-heading-m">About Simone</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p>41 year old office manager</p></li>
+        <li><p>Dyslexic</p></li>
+        <li><p>Uses software which highlights text as it reads it out</p></li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Frustrations</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p>Takes a while to fill in forms, and sometimes has to ask her husband or older son to check what she has written.</p></li>
+        <li><p>Her spelling is bad, and so relies on things like search engines to offer her suggestions as to what she meant.</p></li>
+        <li><p>Still asks a colleague to check important emails she’s sending, just in case.</p></li>
+        <li><p>Can’t concentrate when things like banners or tickers move on a page.</p></li>
+        <li><p>Struggles with lot’s reading or when the language is complicated. Uses audiobooks.</p></li>
+      </ul>
+      
+      <h2 class="govuk-heading-m">Required assistive technology</h2>
+
+      <p>None, complete the task as presented in the browser.</p>
+
+      <h2 class="govuk-heading-m">Task</h2>
+
+      <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-6">
+        <li>Find out what you should do as a U.S. private citizen before you go abroad.</li>
+        <li>There are a couple of social media links under the text. Try to click on the YouTube link</li>
+      </ol>
+      
+      <p><a class="govuk-button" data-module="govuk-button" href="task/step-one.html">Start task</a></p>
+    </div>
+  </div>
+
+{% endblock %}

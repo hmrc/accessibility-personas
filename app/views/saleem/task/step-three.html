@@ -1,0 +1,50 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Step 3 - Saleem - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<script src="/public/javascripts/translate-to-piglatin.user.js" type="text/javascript" async=""></script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">When to submit your application</h1>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Submission dates</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">If you submit your form:</th>
+            <th scope="col" class="govuk-table__header">We must receive it by:</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Electronically</th>
+            <td class="govuk-table__cell">25th of the second month</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Not electronically</td>
+            <td class="govuk-table__cell">15th of the second month</td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+      <h2 class="govuk-heading-m">Guide Dogs for the Blind</h2>
+
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HhI8Jp8-j0k?mute=1&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <form class="govuk-!-margin-top-6" action="step-four.html" method="get">
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+     </form>
+
+    </div>
+  </div>
+
+{% endblock %}

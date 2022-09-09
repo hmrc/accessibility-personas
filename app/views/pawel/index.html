@@ -1,0 +1,57 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Pawel - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "/"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Pawel</h1>
+      <img class="govuk-body govuk-!-margin-bottom-6" src="/public/images/pawel.png" alt="powel's profile picture" style="max-width: 150px;" />
+
+      <blockquote class="govuk-body hmrc-eh-quote hmrc-eh-quote--pawel">
+        Websites can be so distracting. It takes me ages to do anything sometimes, as I feel like I have to read every word and click on every link.
+       </blockquote>
+
+      <h2 class="govuk-heading-m">About Pawel</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p>24 year old chemistry graduate</p></li>
+        <li><p>Asperger’s and anxiety</p></li>
+        <li><p>Adjusts things, like colours, to reduce potential stress and distractions</p></li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Frustrations</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p>Gets easily distracted and wants to read and click everything. Wishes there wasn’t as much text or links.</p></li>
+        <li><p>Finds moving content like banners or video distracting, and gets stressed out by bright colours.</p></li>
+        <li><p>Thinks websites often assume you know more than you do.</p></li>
+        <li><p>Doesn’t like using the phone, but a lot of companies don’t let you contact them by email or live chat.</p></li>
+      </ul>
+      
+      <h2 class="govuk-heading-m">Required assistive technology</h2>
+
+      <p>None, complete the task as presented in the browser.</p>
+
+      <h2 class="govuk-heading-m">Task</h2>
+
+      <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-6">
+        <li>Find out where you can get Tamiflu if you are a U.S. Government employee abroad.</li>
+        <li>Fill in the form on the same page and submit your answers.</li>
+      </ol>
+
+      <p><a class="govuk-button" data-module="govuk-button" href="task/step-one.html">Start task</a></p>
+    </div>
+  </div>
+
+{% endblock %}

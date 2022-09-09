@@ -1,0 +1,59 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Ron - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "/"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Ron</h1>
+      <img class="govuk-body govuk-!-margin-bottom-6" src="/public/images/ron.png" alt="ron's profile picture" style="max-width: 150px;" />
+
+      <blockquote class="govuk-body hmrc-eh-quote hmrc-eh-quote--ron">
+        I don’t like having to ring call centres - it’s too noisy and people don’t speak clearly enough.
+       </blockquote>
+
+      <h2 class="govuk-heading-m">About Ron</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p>82 years old, retired</p></li>
+        <li><p>Multiple conditions: arthritis, hearing loss, cataracts, hip replacements</p></li>
+        <li><p>Does not use any assistive technology</p></li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Frustrations</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p>Hard for him to hear if there’s no hearing loop or it doesn’t work well when in a formal appointment with someone.</p></li>
+        <li><p>Finds it stressful calling a contact centre - there’s often a lot of background noise, and he struggles when the person he’s talking to doesn’t speak clearly.</p></li>
+        <li><p>Poor eyesight makes it hard for him to read large blocks of text.</p></li>
+        <li><p>Doesn’t know how to adjust his browser settings and often he’ll just give up.</p></li>
+      </ul>
+      
+      <h2 class="govuk-heading-m">Required assistive technology</h2>
+
+      <p>None, complete the task as presented in the browser.</p>
+
+      <p>As Ron is not very technical, do not use anything which might help. For example, do not zoom into the page and do not use the keyboard to navigate.</p>
+      
+      <h2 class="govuk-heading-m">Task</h2>
+
+      <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-6">
+        <li>Read the text. Find out the number of Cabinet ministers.</li>
+        <li>Use the pagination at the bottom of the text to go to the second page.</li>
+      </ol>
+
+      <p><a class="govuk-button" data-module="govuk-button" href="task/step-one.html">Start task</a></p>
+    </div>
+  </div>
+
+{% endblock %}

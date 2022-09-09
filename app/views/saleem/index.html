@@ -1,0 +1,57 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Saleem - Accessibility personas - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "/"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Saleem</h1>
+      <img class="govuk-body govuk-!-margin-bottom-6" src="/public/images/saleem.png" alt="saleem's profile picture" style="max-width: 150px;" />
+
+      <blockquote class="govuk-body hmrc-eh-quote hmrc-eh-quote--saleem">
+        I’m fluent in British Sign Language, but people don’t realise it’s different from English and things can be difficult for me to understand.
+       </blockquote>
+
+      <h2 class="govuk-heading-m">About Saleem</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p>22 years old, unemployed</p></li>
+        <li><p>Deaf</p></li>
+        <li><p>Uses BSL as his main language, English is his second language, always has video captions switched on</p></li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Frustrations</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p>Annoyed when captions say things like ‘music playing’ and then don’t have the song words.</p></li>
+        <li><p>Finds it difficult to read large blocks of text - if there are no captions, transcripts are OK.</p></li>
+        <li><p>English isn’t great so if something isn’t easily understood needs it in BSL or a search engine to correct spelling.</p></li>
+        <li><p>Usually has to enter his mobile number when filling in a form, but there’s nowhere to say he prefers to get text messages to calls.</p></li>
+      </ul>
+      
+      <h2 class="govuk-heading-m">Required assistive technology</h2>
+
+      <p>None, complete the task as presented in the browser.</p>
+      
+      <h2 class="govuk-heading-m">Task</h2>
+
+      <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-6">
+        <li>Find out when we need to receive your application if you send it electronically.</li>
+        <li>Watch the video. Try to find out how many people were provided with guide dogs “this year”.</li>
+      </ol>
+
+      <p><a class="govuk-button" data-module="govuk-button" href="task/step-one.html">Start task</a></p>
+    </div>
+  </div>
+
+{% endblock %}
