@@ -38,9 +38,32 @@ Step 3 - Saleem - Accessibility personas - GOV.UK
 
       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HhI8Jp8-j0k?mute=1&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-      <form class="govuk-!-margin-top-6" action="step-four.html" method="get">
+      <p class="govuk-!-margin-top-6 govuk-heading-l">Questions</p>
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      <form action="step-two.html" method="get">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="guide-dogs">How many people were provided with guide dogs this year?</label>
+          <input class="govuk-input govuk-!-width-one-quarter" id="guide-dogs" name="guide-dogs" type="text" autocomplete="off">
+        </div>
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-fieldset__legend">When do we need to receive your application if you send it electronically?</div>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application-1" name="application" type="radio" value="25th of the second month">
+                <label class="govuk-label govuk-radios__label" for="application-1">25th of the second month</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application-2" name="application" type="radio" value="15th of the second month">
+                <label class="govuk-label govuk-radios__label" for="application-2">15th of the second month</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Submit</button>
 
      </form>
 
