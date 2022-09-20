@@ -1,8 +1,12 @@
+---
+title: Let the user change their answers
+caption: Build a basic prototype
+---
 # Let the user change their answers
 
 ## Make the ‘Change’ links work
 
-Make the **Change** links on the ‘Check your answers’ page work by adding the right links.
+Make the **Change** links on the ‘Check answers’ page work by adding the right links.
 
 1. In the `<a>` tag under `{{ data['how-many-balls'] }}`, change the href attribute from `#` to `/juggling-balls`
 2. In the `<a>` tag under `{{ data['most-impressive-trick'] }}`, change the href attribute from `#` to `/juggling-trick`
@@ -36,7 +40,7 @@ For each of the `items`, we’ll add a `checked` value, like this:
 ```
 In each case make sure the spelling is exactly the same as the `value`.
 
-Go to [http://localhost:3000/juggling-balls](http://localhost:3000/juggling-balls) and check the journey works by selecting an answer, continuing to the next page, then going back.
+[Go to http://localhost:3000/juggling-balls](http://localhost:3000/juggling-balls) and check the journey works by selecting an answer, continuing to the next page, then going back.
 
 ## Show the user’s answer in question 2
 
@@ -59,6 +63,6 @@ Add `value: data['most-impressive-trick']` like this:
 }) }}
 ```
 
-Go to [http://localhost:3000/juggling-trick](http://localhost:3000/juggling-trick) and check it works by filling in an answer, continuing to the next page, going back, then refreshing your browser.
+[Go to http://localhost:3000/juggling-trick](http://localhost:3000/juggling-trick) and check it works by filling in an answer, continuing to the next page, going back, then refreshing your browser.
 
-[Next (Show different pages depending on user input - branching)](branching)
+[Next (Show different pages depending on user input)](branching)
